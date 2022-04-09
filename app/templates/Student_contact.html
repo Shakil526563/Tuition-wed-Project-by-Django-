@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 style=" text-align:center;color:rgb(240, 95, 11);font-size: 40px;"><i>Teacher Registration</i></h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+        <input name="Name" class="form-control"  placeholder="Your  Full Name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Your University Name</label>
+        <input name="Education" class="form-control"  placeholder="Your University Name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Which Area Do You Want To Read</label>
+        <input name="Area" class="form-control"  placeholder="Area">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Your Email address</label>
+        <input name="Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">About You</label>
+        <textarea name="Text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div>
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </div>
+</form> 
+</div>
+{% endblock %}

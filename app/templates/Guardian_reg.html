@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 style=" text-align:center;color:rgb(240, 95, 11);font-size: 40px;"><i>Guardian Registration</i></h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+        <input name="Name" class="form-control"  placeholder="Your  Full Name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Class</label>
+        <input name="Class" class="form-control"  placeholder="class">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Which subject you want to read:</label>
+        <input name="Subject" class="form-control"  placeholder="Subject">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">What type of teacher you want:</label>
+        <input name="Teacher" class="form-control"  placeholder="Teacher/du/butex">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Which Area are you live in:</label>
+        <input name="Area" class="form-control"  placeholder="Area">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Your Email address</label>
+        <input name="Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Please short decribe about your child </label>
+        <textarea name="Text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div>
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </div>
+</form> 
+</div>
+{% endblock %}
